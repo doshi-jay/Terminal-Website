@@ -27,9 +27,11 @@ var main = (function () {
             rmdir_help: "Remove directory, this command will only work if the folders are empty.",
             touch_help: "Change file timestamps. If the file doesn't exist, it's created an empty one.",
             sudo_help: "Execute a command as the superuser.",
-            welcome: "Hi, I am Jay Doshi, a Computer Science graduate student at Northeastern University.\n"+
+            welcome: "======================================================================================================================\n" +
+                "Hi, I am Jay Doshi, a Computer Science graduate student at Northeastern University.\n"+
                 "Please use the 'help' command to see the list of available options and get to know me. \n" +
-                "In order to skip text rolling, double click/touch anywhere.",
+                "In order to skip text rolling, double click/touch anywhere.\n" +
+                "======================================================================================================================\n",
             internet_explorer_warning: "NOTE: I see you're using internet explorer, this website won't work properly.",
             welcome_file_name: "welcome_message.txt",
             invalid_command_message: "<value>: command not found.",
@@ -48,7 +50,7 @@ var main = (function () {
             host: "example.com",
             user: "guest",
             is_root: false,
-            type_delay: 20
+            type_delay: 10
         };
         return {
             getInstance: function (options) {
@@ -170,7 +172,7 @@ var main = (function () {
         var command = this.cmdLine.value;
         this.cmdLine.value = "";
         this.prompt.textContent = "";
-        this.output.innerHTML += "<span class=\"prompt-color\">" + this.completePrompt + "</span> " + command + "<br/>";
+        this.output.innerHTML += "<span class=\"prompt-color\">" + this.completePrompt + "</span> " + "<span class=\"prompt-color2\">" + command + "</span><br/>";
     };
 
     Terminal.prototype.init = function () {
