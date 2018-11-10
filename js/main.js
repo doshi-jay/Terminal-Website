@@ -70,6 +70,47 @@ var main = (function () {
         Singleton.defaultOptions = {
             "contact.txt": "Email: doshi.ja@husky.neu.edu\n" +
                 "Phone No.: +1-(978)-930-3476",
+            "academics.txt": "======================================================================================================================\n" +
+                "Northeastern University, Boston, MA (GPA: 3.667/4.0) Sept. 2017 – Present\n" +
+                "College of Computer and Information Science Expected graduation: Dec. 2019\n" +
+                "Candidate for a Master of Science in Computer Science\n" +
+                "Related Courses: Programming Design Paradigm, Algorithms, Data Mining, Database Management Systems, Deep Learning\n" +
+                "------------------------------------------------------------------------------------------------------------------------\n" +
+                "Veermata Jijabai Technological Institute (VJTI), Mumbai, India May 2013 – May 2017\n" +
+                "Bachelor of Technology in Information Technology\n" +
+                "Related Courses: Web Technologies, Data Mining, Artificial Intelligence, Data Structures and Algorithms, Operating Systems,\n" +
+                "Discrete Structures, Distributed Systems, Database System and Applications, Software Engineering\n " +
+                "======================================================================================================================",
+            "technologies.txt":
+                "======================================================================================================================\n" +
+                "Some of the technologies I've worked on: \n" +
+                "Languages: Java, C/ C++, Python, Racket, HTML, XML, XSLT, CSS\n" +
+                "Systems: Linux (Ubuntu), Windows 7/8/10\n" +
+                "Database: MySQL, MongoDB, NoSQL, SQL Server\n" +
+                "Web Technologies: Angular, JavaScript, React, REST, Git, Bootstrap, JPA, PHP, WSDL\n" +
+                "======================================================================================================================",
+            "research.txt":
+                "======================================================================================================================\n" +
+                "Title: Solving Rubik’s Cube Using Graph Theory\n\n" +
+                "Link: https://link.springer.com/chapter/10.1007/978-981-13-1132-1_24\n\n" +
+                "Abstract: The most common application of graph theory is search problems. Using graph theory, this project aims to solve \none such " +
+                "NP-hard problem, i.e., finding a path for a Rubik’s cube to reach the solved state from a scrambled one. Rubik’s \ncube  is" +
+                " among one of the fascinating puzzles and solving them has been a challenge given its vast search space of 43 \nquintillion." +
+                "This paper aims at demonstrating the application and performance of traditional search algorithms like breadth \nfirst search," +
+                "depth-limited search, and bidirectional search, and proposes a new approach to find the solution by \nintegrating them." +
+                "The proposed algorithm makes use of the fact that the God’s number for a 3  × 3  × 3 Rubik’s cube is 20,\n i.e.,the fact that " +
+                "any cube scramble within the 43 quintillion states can be solved within a max of 20 moves.\n\n" +
+                "------------------------------------------------------------------------------------------------------------------------\n" +
+                "Title: Website Health Analyser to filter obsolete" + "links to avoid Link Rot\n\n" +
+                "Link: http://www.ijircce.com/upload/2017/march/323_Website.pdf\n\n" +
+                "Abstract: The purpose of this project is to crawl a website to find out the status of each of the links contained in its\n" +
+                "pages. Each website hosted on the Internet contains several links and each of these links reference a certain web page.\n" +
+                "Over the time, these web pages are either removed or are no longer available due to several reasons, but the links\n" +
+                "referencing them still exist. This causes those links to be obsolete and it becomes the responsibility of the website\n" +
+                "developers to periodically check all the links in all the web pages in their website. Moreover, having obsolete or\n" +
+                "wrongly referenced links also harms the SEO ranking of the website in various Search Engines and in certain cases lead\n" +
+                "to a loss in revenue. This paper also discusses the necessary features a successful web crawler must possess.\n\n" +
+                "======================================================================================================================",
             "Github": "https://github.com/jaydoshi95",
             "LinkedIn": "https://www.linkedin.com/in/jay-k-doshi/",
             "Facebook": "https://www.facebook.com/jaykartikdoshi",
@@ -464,7 +505,7 @@ var main = (function () {
                 if (!skipped) {
                     setTimeout(typer, isNewLine ? timer * 2 : timer);
                 } else {
-                    output.innerHTML += (text.substring(i).replace(new RegExp("\n", 'g'), "<br/>")) + "<br/>";
+                    output.innerHTML += `${text.substring(i).replace(new RegExp('\n', 'g'), "<br/>")}<br/>`;
                     document.removeEventListener("dblclick", skip);
                     callback();
                 }
